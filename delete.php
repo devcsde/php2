@@ -1,17 +1,11 @@
 <?php
-
-
+    include("connection.php");
+    $emp_id = $_GET["delete"];
+    $query = "DELETE FROM emp_record WHERE id = '$emp_id'";
+    $execute = $pdo->query($query);
+    if($execute){
+        echo "<script>window.open('read.php?deleted=Record deleted successfully', '_self')</script>";
+    } else {
+        echo "Problem deleting the file";
+    }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DELETE</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   
-</body>
-</html>
