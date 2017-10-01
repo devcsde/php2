@@ -20,6 +20,7 @@ if(isset($_POST["Submit"])) {
 </head>
 <body>
     <h2 class="success"><?php echo $_GET["deleted"];  ?></h2>
+    <h2 class="success"><?php echo $_GET["Updated"];  ?></h2>
     <table width="66%" border="5" align="center">
         <caption class="caption">Employees records</caption>
         <tr>
@@ -52,7 +53,7 @@ if(isset($_POST["Submit"])) {
                 <td><?php echo $Dept; ?></td>
                 <td><?php echo $Salary; ?></td>
                 <td><?php echo $HomeAddress; ?></td>
-                <td><a href="update.php?id=<?php echo $Id; ?>">Update</a></td>
+                <td><a href="update.php?update=<?php echo $Id; ?>">Update</a></td>
                 <td><a href="delete.php?delete=<?php echo $Id; ?>">Delete</a></td>
         </tr>
             <?php
