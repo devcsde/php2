@@ -59,7 +59,7 @@ if(isset($_POST["Submit"])) {
                 header("Location:".$newLocation);
                 exit;
             }
-            redirect_to("read.php?Updated=Record has been updated succesfully");
+            redirect_to("index.php?Updated=Record has been updated succesfully");
         }
     } else {
         echo "<span class='fieldInfoHeading'>Name and SSN fields cannot be empty.</span>";

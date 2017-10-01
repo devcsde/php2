@@ -31,6 +31,14 @@ if(isset($_POST["Submit"])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="menu">
+<ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="create.php">Create </a></li>
+    <li><a href="search.php">Search </a></li>
+</ul>
+<div class="clear"></div>
+</div>
     <form action="create.php" method="post">
         <fieldset>
             <span class="fieldInfo">Name:</span><br>

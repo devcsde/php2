@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>READ</title>
+    <title>INDEX</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <div id="menu">
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="create.php">Create </a></li>
-    <li><a href="search.php">Search </a></li>
-</ul>
-<div class="clear"></div>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="create.php">Create </a></li>
+        <li><a href="search.php">Search </a></li>
+    </ul>
+    <div class="clear"></div>
 </div>
+
+<div>
     <h2 class="success"><?php echo $_GET["deleted"];  ?></h2>
     <h2 class="success"><?php echo $_GET["Updated"];  ?></h2>
     <table width="66%" border="5" align="center">
@@ -31,9 +34,8 @@
             <th>Delete</th>
         </tr>
             <?php
-            $showId = $_GET["show"];
             include("connection.php");
-            $query = "SELECT * FROM emp_record WHERE id = '$showId'";
+            $query = "SELECT * FROM emp_record";
             $execute = $pdo->query($query);
             if ($execute) {
                 foreach ($pdo->query($query) as $row) {
@@ -46,7 +48,7 @@
             ?>
         <tr>
                 <td><?php echo $Id; ?></td>
-                <td><?php echo $Name; ?></td>
+                <td><a href="read.php?show=<?php echo $Id; ?>"><?php echo $Name; ?></a></td>
                 <td><?php echo $SSN; ?></td>
                 <td><?php echo $Dept; ?></td>
                 <td><?php echo $Salary; ?></td>
@@ -63,5 +65,6 @@
             }
             ?>
     </table>
+</div>    
 </body>
 </html>
