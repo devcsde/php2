@@ -1,0 +1,48 @@
+input[type="text"], input[type="number"], textarea {
+    border: 1px solid_dashed;
+    background-color: rgb(221,216,212);
+    width: 480px;
+    padding: 0.5em;
+    font-size: 1.0em;
+}
+
+form {
+    width:500px;
+    margin: 0 auto;
+}
+
+input[type="submit"]{
+    color: white;
+    font-size: 1.0em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 200px;
+    height: 40px;
+    background-color: #454546;
+    border: 5px solid;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-color: #222221;
+    font-weight: bold;
+}
+
+.fieldInfo {
+    color: rgb(251,174,44);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.0em;
+}
+.success, .caption {
+    padding: 5px;
+    color: #4CE239;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fieldInfoHeading {
+    padding: 5px;
+    color: #FB442C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
